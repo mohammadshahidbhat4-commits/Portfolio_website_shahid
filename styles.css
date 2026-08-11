@@ -1,74 +1,67 @@
 /* styles.css - Start styling your potfolio website here */
 /* === RESET & BASE === */
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 /* CSS Custom Properties (variables) - DRY Principle */
 :root {
---primary: #1B4F72;
---accent: #F18F01;
---text: #2C3E50;
---light: #F4F6F8;
---white: #FFFFFF;
---font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --primary: #3B0000;       /* Deep blood red */
+    --accent: #D4AF37;        /* Antique gold */
+    --text: #6B1E2A;          /* Rich burgundy text */
+    --light: #F8F1F1;         /* Warm ivory */
+    --white: #FFFFFF;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
 }
 body {
-font-family: var(--font-main);
-color: var(--text);
-line-height: 1.6;
-background-color: var(--white);
+    font-family: var(--font-main);
+    color: var(--text);
+    line-height: 1.6;
+    background-color: var(--light);
 }
 /* NAVIGATION */
 .site-header{
-position: sticky;
-top: 0;
-z-index: 1000;
-background: var(--primary);
-transition: background 0.3s ease, box-shadow 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--primary);
+    transition: background 0.3s ease, box-shadow 0.3s ease; /*Day 9*/
 }
 .navbar {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+   
 }
 .logo{
-font-size: 28px;
-font-weight: bold;
-color: var(--white);
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--white);
 }
 .nav-links {
-list-style: none;
-display: flex;
-gap: 30px;
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 .nav-links a {
-color: var(--white);
-text-decoration: none;
-font-weight: 500;
- transition: color 0.3s;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 .nav-links a:hover {
-color: var(--accent);
+    color: var(--accent);
+ 
 }
 .nav-links a.active{
-color: var(--accent);
-font-weight: bold;
-border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent);
 }
-/* HERO SECTION */
-.hero-section {
-text-align: center;
-background: linear-gradient(135deg, var(--primary), #2E86AB);
-color: var(--white);
-padding: 100px 5%;
-}
-.hero-section h1 {
-font-size: 3rem;
-margin-bottom: 20px;
-}
+ 
 /* === SECTION STYLES === */
 section{
     padding: 80px 5%;
@@ -77,7 +70,7 @@ section h2{
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 50px;
-    color: var(--primary);
+    color: var(--accent);
 }
  
 section h2::after{
@@ -89,8 +82,19 @@ section h2::after{
     margin: 12px auto 0;
     border-radius: 2px;
 }
+
+/* HERO SECTION */
+.hero-section {
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary), #720000);
+    color: var(--white);
+    padding: 70px 5%;
+}
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
  
- 
+}
 /* SKILLS SECTION */
 .skills-grid{
     display:grid;
@@ -143,5 +147,4 @@ section h2::after{
   flex: 1;
   display: flex;
   flex-direction: column;
-}
- 
+} 
